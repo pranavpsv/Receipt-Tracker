@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budgeting Receipt Tracker</title>
+</head>
+<body>
+    <a href="/"><h1>Budgeting Receipt Tracker</h1></a>
+    <img src="{{ url_for('static',filename=fileName) }}" alt="">
+    {% if (text == "") %}
+    <p>Unfortunately, we cannot read the image, please upload another copy of it</p>
+    {% else %}
+    <pre>{{ text }}</pre>
+    {% endif %}
+
+</body>
+</html>
